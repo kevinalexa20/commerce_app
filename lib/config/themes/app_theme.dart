@@ -9,7 +9,7 @@ class AppTheme {
   static final light = FlexThemeData.light(
     scheme: FlexScheme.ebonyClay,
     surfaceMode: FlexSurfaceMode.highScaffoldLowSurfacesVariantDialog,
-    // blendLevel: 40,
+    blendLevel: 20,
     appBarStyle: FlexAppBarStyle.primary,
     appBarOpacity: 0.95,
     appBarElevation: 0,
@@ -40,7 +40,7 @@ class AppTheme {
   static final dark = FlexThemeData.dark(
     scheme: FlexScheme.ebonyClay,
     surfaceMode: FlexSurfaceMode.highScaffoldLowSurfacesVariantDialog,
-    // blendLevel: 40,
+    blendLevel: 20,
     appBarStyle: FlexAppBarStyle.primary,
     appBarOpacity: 0.95,
     appBarElevation: 0,
