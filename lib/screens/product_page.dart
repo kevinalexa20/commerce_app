@@ -1,3 +1,4 @@
+import 'package:commerce_app/config/config.dart';
 import 'package:commerce_app/utils/utils.dart';
 import 'package:commerce_app/widgets/widgets.dart';
 import 'package:flutter/cupertino.dart';
@@ -1184,7 +1185,9 @@ class ProductPage extends StatelessWidget {
                     HeightSpacer(height: 15.h),
                     //button text, when user tap go to discussion page
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        context.push(RouteLocation.discussionPage);
+                      },
                       child: Container(
                         width: deviceSize.width,
                         height: 50.h,
@@ -1482,7 +1485,75 @@ class ProductPage extends StatelessWidget {
                     ),
                   ],
                 ),
-              )
+              ),
+              HeightSpacer(height: 10.h),
+              Container(
+                padding: EdgeInsets.all(10),
+                width: deviceSize.width,
+                decoration: BoxDecoration(
+                  color: context.colorScheme.background,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    GestureDetector(
+                      onTap: () {},
+                      child: Image(
+                        image: AssetImage('assets/icon/chat-bw-icon.png'),
+                      ),
+                    ),
+                    WidthSpacer(width: 10.w),
+                    //button text, when user tap add product to the cart
+                    GestureDetector(
+                      onTap: () {},
+                      child: Container(
+                        width: 120.w,
+                        height: 50.h,
+                        decoration: BoxDecoration(
+                          // color: context.colorScheme.primary,
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(
+                            color: context.colorScheme.primary,
+                          ),
+                        ),
+                        child: Center(
+                          child: Text(
+                            'Beli Langsung',
+                            style: TextStyle(
+                              color: context.colorScheme.primary,
+                              fontSize: 14.sp,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    WidthSpacer(width: 10.w),
+                    GestureDetector(
+                      onTap: () {},
+                      child: Container(
+                        width: 120.w,
+                        height: 50.h,
+                        decoration: BoxDecoration(
+                          color: context.colorScheme.primary,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Center(
+                          child: Text(
+                            '+ Keranjang',
+                            style: TextStyle(
+                              color: context.colorScheme.onPrimary,
+                              fontSize: 14.sp,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
